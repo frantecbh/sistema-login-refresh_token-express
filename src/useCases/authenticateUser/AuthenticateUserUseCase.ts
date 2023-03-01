@@ -30,7 +30,7 @@ class AuthenticateUserUseCase {
       }
 
       //gerar tocken usuer
-      const token = sign({}, '4bdff350efc73ec26baf755d4ac8154b', {
+      const token = sign({}, process.env.SECRET_KEY_TOKEN, {
         subject: userAlreadyExists.id,
         expiresIn: '20s'
 
